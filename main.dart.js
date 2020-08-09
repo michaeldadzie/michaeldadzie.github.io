@@ -43703,7 +43703,7 @@ F.GQ.prototype={
 $0:function(){return C.Q.eq(window,"https://dart.dev/","dart")},
 $S:5}
 F.GR.prototype={
-$0:function(){return C.Q.eq(window,"google.com","flutter")},
+$0:function(){return C.Q.eq(window,"https://app.slack.com/client/TLD741P9D/CM3STSHV4","flutter")},
 $S:5}
 T.pf.prototype={
 E:function(a){var s,r,q,p,o,n="Got a project?\nLet's talk.",m=null,l=new L.km(n,m,m)
