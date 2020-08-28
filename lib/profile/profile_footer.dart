@@ -203,6 +203,8 @@ class Thanks extends StatelessWidget {
                       style:
                           GoogleFonts.raleway(fontSize: 20, color: Colors.grey))
                 ]),
+            textAlign: TextAlign.center,
+            softWrap: true,
           ),
         ],
       ),
