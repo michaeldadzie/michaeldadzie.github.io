@@ -4,6 +4,7 @@ import 'profile_about.dart';
 import 'profile_footer.dart';
 import 'profile_projects.dart';
 import 'profile_info.dart';
+import 'profile_ui_clones.dart';
 import '../widgets/main_drawer.dart';
 import '../widgets/responsive_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -14,6 +15,11 @@ class ProfilePage extends StatelessWidget {
     return ResponsiveWidget(
       largeScreen: Scaffold(
         appBar: AppBar(
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(20),
+            child: NavHeader(),
+          ),
+          // flexibleSpace: NavHeader(),
           elevation: 0.0,
           backgroundColor: Colors.black,
           iconTheme: new IconThemeData(color: Colors.red),
@@ -27,7 +33,7 @@ class ProfilePage extends StatelessWidget {
               largeScreen: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  NavHeader(),
+                  // NavHeader(),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.1),
                   ProfileInfo(),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.2),
@@ -35,6 +41,7 @@ class ProfilePage extends StatelessWidget {
                   SizedBox(height: 20),
                   AboutMe(),
                   ProjectScreen(),
+                  ProjectUI(),
                   FooterScreen(),
                 ],
               ),
@@ -50,16 +57,18 @@ class NavHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveWidget(
-      largeScreen: Row(
-        mainAxisAlignment: ResponsiveWidget.isSmallScreen(context)
-            ? MainAxisAlignment.center
-            : MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          MDDot(),
-          if (!ResponsiveWidget.isSmallScreen(context))
-            Row(
-              children: <Widget>[
+      largeScreen: Container(
+        width: 1000,
+        child: Row(
+          mainAxisAlignment: ResponsiveWidget.isSmallScreen(context)
+              ? MainAxisAlignment.center
+              : MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            MDDot(),
+            if (!ResponsiveWidget.isSmallScreen(context))
+              Row(
+                children: <Widget>[
 //                NavButton(
 //                  text: 'about',
 //                  onPressed: () {},
@@ -68,13 +77,14 @@ class NavHeader extends StatelessWidget {
 //                  text: 'work',
 //                  onPressed: () {},
 //                ),
-                NavButton(
-                  text: 'contact',
-                  onPressed: _createEmail,
-                ),
-              ],
-            )
-        ],
+                  NavButton(
+                    text: 'contact',
+                    onPressed: _createEmail,
+                  ),
+                ],
+              )
+          ],
+        ),
       ),
     );
   }
