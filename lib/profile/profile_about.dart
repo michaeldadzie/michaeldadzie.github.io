@@ -70,7 +70,7 @@ class AboutMe extends StatelessWidget {
                             style: GoogleFonts.raleway(
                                 fontSize: 20, color: Colors.blueAccent)),
                         TextSpan(
-                            text: 'I am also a member of the ',
+                            text: 'I am a member of the ',
                             style: GoogleFonts.raleway(
                                 fontSize: 20, color: Colors.white)),
                         TextSpan(

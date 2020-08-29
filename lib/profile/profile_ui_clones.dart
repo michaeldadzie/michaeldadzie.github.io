@@ -8,7 +8,7 @@ class ProjectUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Vx.black,
+      color: Vx.white,
       child: Flex(
         direction: context.isMobile ? Axis.vertical : Axis.horizontal,
         children: [
@@ -17,13 +17,13 @@ class ProjectUI extends StatelessWidget {
                 text: 'UI Clones, \n',
                 style: GoogleFonts.raleway(
                     fontSize: 30,
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold),
                 children: [
                   TextSpan(
-                      text: 'I clone mobile UI designs using flutter',
-                      style:
-                          GoogleFonts.raleway(fontSize: 15, color: Colors.grey))
+                    text: 'I clone mobile UI designs using flutter',
+                    style: GoogleFonts.raleway(fontSize: 15, color: Colors.red),
+                  )
                 ]),
           ),
           SizedBox(
@@ -33,25 +33,34 @@ class ProjectUI extends StatelessWidget {
           Expanded(
             child: VxSwiper(
               enlargeCenterPage: true,
-              enableInfiniteScroll: false,
+              enableInfiniteScroll: true,
               scrollDirection: Axis.horizontal,
+              autoPlay: true,
+              autoPlayAnimationDuration: 2.seconds,
+              pauseAutoPlayOnTouch: 5.seconds,
               items: [
                 UIClones(
-                  link: 'https://i.ibb.co/qny3Msj/IMG-4355.png',
+                  link: 'assets/meal.png',
                 ),
                 UIClones(
-                  link: 'https://i.ibb.co/w6Q36Sd/IMG-4356.png',
+                  link: 'assets/notes.png',
                 ),
                 UIClones(
-                  link: 'https://i.ibb.co/VDhKJVg/IMG-4357.png',
-                )
+                  link: 'assets/cat.png',
+                ),
+                UIClones(
+                  link: 'assets/fav.png',
+                ),
+                UIClones(
+                  link: 'assets/mb.png',
+                ),
               ],
-              height: 600,
-              viewportFraction: context.isMobile ? 0.6 : 0.3,
+              height: 1000,
+              viewportFraction: context.isMobile ? 1 : 0.3,
             ),
-          )
+          ),
         ],
-      ).p64().h(context.isMobile ? 500 : 500),
+      ).p64().h(context.isMobile ? 900 : 800),
     );
   }
 }
@@ -63,12 +72,12 @@ class UIClones extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
-        width: 300,
-        height: 400,
+        width: 1242,
+        height: 2688,
         decoration: BoxDecoration(
             image: DecorationImage(
-          image: NetworkImage(link),
-          fit: BoxFit.fitHeight,
+          image: AssetImage(link),
+          fit: BoxFit.fill,
         )),
       ),
     );
