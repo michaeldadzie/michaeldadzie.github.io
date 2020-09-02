@@ -15,7 +15,7 @@ class MainDrawer extends StatelessWidget {
       ),
       title: (Text(
         title,
-        style: TextStyle(fontSize: 20),
+        style: TextStyle(fontSize: 20, color: Colors.black),
       )),
       onTap: tapHandler,
     );
@@ -70,11 +70,11 @@ class MainDrawer extends StatelessWidget {
           ListTile(
             title: (Text(
               'Twitter',
-              style: GoogleFonts.raleway(fontSize: 20),
+              style: GoogleFonts.raleway(fontSize: 20, color: Colors.black),
             )),
             trailing: Icon(
               AntDesign.twitter,
-              color: Colors.white,
+              color: Colors.black,
             ),
             onTap: () => html.window
                 .open('https://twitter.com/michaeldadzie_', 'michaeldadzie'),
@@ -82,11 +82,11 @@ class MainDrawer extends StatelessWidget {
           ListTile(
             title: (Text(
               'Github',
-              style: GoogleFonts.raleway(fontSize: 20),
+              style: GoogleFonts.raleway(fontSize: 20, color: Colors.black),
             )),
             trailing: Icon(
               AntDesign.github,
-              color: Colors.white,
+              color: Colors.black,
             ),
             onTap: () => html.window
                 .open('https://github.com/michaeldadzie', 'michaeldadzie'),
@@ -94,11 +94,11 @@ class MainDrawer extends StatelessWidget {
           ListTile(
             title: (Text(
               'Instagram',
-              style: GoogleFonts.raleway(fontSize: 20),
+              style: GoogleFonts.raleway(fontSize: 20, color: Colors.black),
             )),
             trailing: Icon(
               AntDesign.instagram,
-              color: Colors.white,
+              color: Colors.black,
             ),
             onTap: () => html.window
                 .open('https://instagram.com/afrobeezyy', 'michaeldadzie'),
@@ -106,11 +106,11 @@ class MainDrawer extends StatelessWidget {
           ListTile(
             title: (Text(
               'LinkedIn',
-              style: GoogleFonts.raleway(fontSize: 20),
+              style: GoogleFonts.raleway(fontSize: 20, color: Colors.black),
             )),
             trailing: Icon(
               AntDesign.linkedin_square,
-              color: Colors.white,
+              color: Colors.black,
             ),
             onTap: () => html.window.open(
                 'https://www.linkedin.com/in/michael-dadzie-9b466b181/',

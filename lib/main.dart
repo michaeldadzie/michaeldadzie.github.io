@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
         accentColor: Colors.red,
         brightness: Brightness.dark,
         primaryColorDark: Colors.black,
-        canvasColor: Colors.black,
+        canvasColor: Colors.white,
       ),
       home: ProfilePage(),
     );

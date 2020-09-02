@@ -8,6 +8,7 @@ import 'profile_ui_clones.dart';
 import '../widgets/main_drawer.dart';
 import '../widgets/responsive_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class ProfilePage extends StatelessWidget {
   @override
@@ -15,14 +16,18 @@ class ProfilePage extends StatelessWidget {
     return ResponsiveWidget(
       largeScreen: Scaffold(
         appBar: AppBar(
-          bottom: PreferredSize(
-            preferredSize: Size.fromHeight(20),
+          centerTitle: true,
+          title: Center(
             child: NavHeader(),
           ),
+          // bottom: PreferredSize(
+          //   preferredSize: Size.fromHeight(20),
+          //   child: NavHeader(),
+          // ),
           // flexibleSpace: NavHeader(),
           elevation: 0.0,
-          backgroundColor: Colors.black,
-          iconTheme: new IconThemeData(color: Colors.red),
+          backgroundColor: Colors.white,
+          iconTheme: new IconThemeData(color: Vx.red700),
         ),
         drawer: ResponsiveWidget.isSmallScreen(context) ? MainDrawer() : null,
         body: SingleChildScrollView(
@@ -41,7 +46,7 @@ class ProfilePage extends StatelessWidget {
                   SizedBox(height: 20),
                   AboutMe(),
                   ProjectScreen(),
-                  ProjectUI(),
+                  // ProjectUI(),
                   FooterScreen(),
                 ],
               ),
@@ -58,25 +63,28 @@ class NavHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveWidget(
       largeScreen: Container(
-        width: 1000,
+        width: 5000,
         child: Row(
           mainAxisAlignment: ResponsiveWidget.isSmallScreen(context)
               ? MainAxisAlignment.center
-              : MainAxisAlignment.spaceBetween,
+              : MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             MDDot(),
             if (!ResponsiveWidget.isSmallScreen(context))
               Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-//                NavButton(
-//                  text: 'about',
-//                  onPressed: () {},
-//                ),
-//                NavButton(
-//                  text: 'work',
-//                  onPressed: () {},
-//                ),
+                  // NavButton(
+                  //   text: 'about',
+                  //   onPressed: () {},
+                  // ),
+                  // SizedBox(width: 2),
+                  // NavButton(
+                  //   text: 'work',
+                  //   onPressed: () {},
+                  // ),
+                  // SizedBox(width: 2),
                   NavButton(
                     text: 'contact',
                     onPressed: _createEmail,
@@ -109,7 +117,8 @@ class MDDot extends StatelessWidget {
         Text(
           'MD',
           textScaleFactor: 2,
-          style: GoogleFonts.raleway(fontSize: 20, fontWeight: FontWeight.bold),
+          style: GoogleFonts.raleway(
+              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
         ),
         SizedBox(
           width: 5,
@@ -120,9 +129,10 @@ class MDDot extends StatelessWidget {
           width: 8,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.red,
+            color: Vx.red700,
           ),
         ),
+        SizedBox(width: 45)
       ],
     );
   }
@@ -142,11 +152,17 @@ class NavButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-      shape: StadiumBorder(),
-      color: Colors.red,
-      child: Text(text),
+      // borderSide: BorderSide(
+      //   color: Colors.red,
+      // ),
+      child: Text(
+        text,
+        style: GoogleFonts.raleway(color: Colors.white),
+      ),
+      color: Vx.red700,
       onPressed: onPressed,
       highlightColor: color,
+      padding: EdgeInsets.all(10),
     );
   }
 }

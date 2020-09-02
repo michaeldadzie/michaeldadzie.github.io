@@ -3,10 +3,11 @@ import '../widgets/responsive_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../profile/profile_footer.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class ProfileInfo extends StatelessWidget {
   profileImage(context) => AnimatedContainer(
-        duration: Duration(seconds: 1),
+        duration: Duration(seconds: 2),
         height: ResponsiveWidget.isSmallScreen(context)
             ? MediaQuery.of(context).size.height * 0.25
             : MediaQuery.of(context).size.width * 0.25,
@@ -15,10 +16,10 @@ class ProfileInfo extends StatelessWidget {
             : MediaQuery.of(context).size.width * 0.25,
         decoration: BoxDecoration(
           backgroundBlendMode: BlendMode.luminosity,
-          color: Colors.black26,
+          color: Colors.white,
           shape: BoxShape.circle,
           image: DecorationImage(
-            image: AssetImage('md.png'),
+            image: AssetImage('mnkd.png'),
             alignment: Alignment.center,
             fit: BoxFit.cover,
           ),
@@ -42,11 +43,11 @@ class ProfileInfo extends StatelessWidget {
       Text(
         'Hi there! I\'m',
         textScaleFactor: 2,
-        style: GoogleFonts.raleway(fontSize: 20, color: Colors.red),
+        style: GoogleFonts.raleway(fontSize: 20, color: Vx.red700),
       ),
       Text('Michael\nDadzie',
           style: GoogleFonts.raleway(
-              fontSize: 60, color: Colors.white, fontWeight: FontWeight.bold)),
+              fontSize: 60, color: Colors.black, fontWeight: FontWeight.bold)),
       SizedBox(
         height: 10,
       ),
@@ -54,7 +55,7 @@ class ProfileInfo extends StatelessWidget {
         'A Freelance Flutter Developer\n',
         softWrap: true,
         textScaleFactor: 1.5,
-        style: GoogleFonts.raleway(color: Colors.white70),
+        style: GoogleFonts.raleway(color: Colors.grey),
       ),
       Row(
         children: [SocialAccounts()],
@@ -71,7 +72,7 @@ class ProfileInfo extends StatelessWidget {
               'Resume',
               style: GoogleFonts.raleway(color: Colors.white),
             ),
-            color: Colors.red,
+            color: Vx.red700,
             onPressed: () {},
             padding: EdgeInsets.all(10),
           ),
@@ -80,12 +81,12 @@ class ProfileInfo extends StatelessWidget {
           ),
           OutlineButton(
             borderSide: BorderSide(
-              color: Colors.black,
+              color: Colors.white,
             ),
             shape: StadiumBorder(),
             child: Text(
               'Connect',
-              style: GoogleFonts.raleway(color: Colors.red),
+              style: GoogleFonts.raleway(color: Vx.red700),
             ),
             onPressed: createEmail,
             padding: EdgeInsets.all(10),
