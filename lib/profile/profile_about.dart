@@ -10,7 +10,7 @@ class AboutMe extends StatelessWidget {
     return Column(
       children: [
         AnimatedPadding(
-          duration: Duration(seconds: 1),
+          duration: Duration(seconds: 2),
           padding: EdgeInsets.all(20),
           child: Container(
             height: 300,
@@ -22,27 +22,30 @@ class AboutMe extends StatelessWidget {
                 Text(
                   'About Me',
                   style: GoogleFonts.raleway(
-                      fontSize: 60, fontWeight: FontWeight.bold),
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
                 ),
                 RichText(
+                  softWrap: true,
                   text: TextSpan(
                       text:
                           'I am an avid open source developer, experienced with all the \n',
                       style: GoogleFonts.raleway(
                         fontSize: 20,
-                        color: Colors.white,
+                        color: Colors.black,
                       ),
                       children: [
                         TextSpan(
                             text:
                                 'stages of development cycle for dynamic Mobile Application Projects.\n',
                             style: GoogleFonts.raleway(
-                                fontSize: 20, color: Colors.white)),
+                                fontSize: 20, color: Colors.black)),
                         TextSpan(
                             text:
                                 'Well versed in these programming languages; ',
                             style: GoogleFonts.raleway(
-                                fontSize: 20, color: Colors.white)),
+                                fontSize: 20, color: Colors.black)),
                         TextSpan(
                             recognizer: new TapGestureRecognizer()
                               ..onTap = () => html.window.open(
@@ -61,7 +64,7 @@ class AboutMe extends StatelessWidget {
                         TextSpan(
                             text: 'and ',
                             style: GoogleFonts.raleway(
-                                fontSize: 20, color: Colors.white)),
+                                fontSize: 20, color: Colors.black)),
                         TextSpan(
                             recognizer: new TapGestureRecognizer()
                               ..onTap = () =>
@@ -72,7 +75,7 @@ class AboutMe extends StatelessWidget {
                         TextSpan(
                             text: 'I am a member of the ',
                             style: GoogleFonts.raleway(
-                                fontSize: 20, color: Colors.white)),
+                                fontSize: 20, color: Colors.black)),
                         TextSpan(
                             recognizer: new TapGestureRecognizer()
                               ..onTap = () => html.window.open(

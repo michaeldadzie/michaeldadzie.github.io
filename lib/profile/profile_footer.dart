@@ -13,17 +13,17 @@ class FooterScreen extends StatelessWidget {
         VxDevice(
           mobile: VStack(
             [
-              "Got a project?\nLet's talk.".text.center.white.xl2.make(),
+              "Got a project?\nLet's talk.".text.center.black.xl2.make(),
               10.heightBox,
               InkWell(
                 onTap: _createEmail,
                 child: 'dadziemikke@gmail.com'
                     .text
-                    .color(Colors.redAccent)
+                    .color(Vx.red700)
                     .semiBold
                     .make()
                     .box
-                    .border(color: Colors.redAccent)
+                    .border(color: Vx.red700)
                     .p16
                     .rounded
                     .make(),
@@ -33,17 +33,17 @@ class FooterScreen extends StatelessWidget {
           ),
           web: HStack(
             [
-              "Got a project?\nLet's talk.".text.center.white.xl2.make(),
+              "Got a project?\nLet's talk.".text.center.black.xl2.make(),
               10.widthBox,
               InkWell(
                 onTap: _createEmail,
                 child: 'dadziemikke2@gmail.com'
                     .text
-                    .color(Colors.redAccent)
+                    .color(Vx.red700)
                     .semiBold
                     .make()
                     .box
-                    .border(color: Colors.redAccent)
+                    .border(color: Vx.red700)
                     .p16
                     .rounded
                     .make(),
@@ -87,8 +87,8 @@ class MDot extends StatelessWidget {
           Text(
             'MD',
             textScaleFactor: 2,
-            style:
-                GoogleFonts.raleway(fontSize: 20, fontWeight: FontWeight.bold),
+            style: GoogleFonts.raleway(
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
           ),
           SizedBox(
             width: 5,
@@ -98,7 +98,7 @@ class MDot extends StatelessWidget {
             width: 8,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.red,
+              color: Vx.red700,
             ),
           ),
         ],
@@ -113,28 +113,28 @@ class SocialAccounts extends StatelessWidget {
     return [
       Icon(
         AntDesign.twitter,
-        color: Colors.white,
+        color: Colors.black,
       ).mdClick(() {
         launch("https://twitter.com/michaeldadzie_");
       }).make(),
       20.widthBox,
       Icon(
         AntDesign.instagram,
-        color: Colors.white,
+        color: Colors.black,
       ).mdClick(() {
         launch("https://instagram.com/afrobeezyy");
       }).make(),
       20.widthBox,
       Icon(
         AntDesign.linkedin_square,
-        color: Colors.white,
+        color: Colors.black,
       ).mdClick(() {
         launch("https://www.linkedin.com/in/michael-dadzie-9b466b181/");
       }).make(),
       20.widthBox,
       Icon(
         AntDesign.github,
-        color: Colors.white,
+        color: Colors.black,
       ).mdClick(() {
         launch("https://github.com/michaeldadzie");
       }).make()
@@ -180,7 +180,7 @@ class Thanks extends StatelessWidget {
           RichText(
             text: TextSpan(
                 text: 'Thanks for visiting, ',
-                style: GoogleFonts.raleway(fontSize: 20, color: Colors.white),
+                style: GoogleFonts.raleway(fontSize: 20, color: Colors.black),
                 children: [
                   TextSpan(
                       text: 'Hear from you soon.',
@@ -196,7 +196,7 @@ class Thanks extends StatelessWidget {
           RichText(
             text: TextSpan(
                 text: 'Thanks for visiting. ',
-                style: GoogleFonts.raleway(fontSize: 20, color: Colors.white),
+                style: GoogleFonts.raleway(fontSize: 20, color: Colors.black),
                 children: [
                   TextSpan(
                       text: 'Hear from you soon.',
