@@ -12,9 +12,9 @@ class AboutMe extends StatelessWidget {
         AnimatedPadding(
           duration: Duration(seconds: 2),
           padding: EdgeInsets.all(20),
-          child: Container(
-            height: 300,
-            width: 1000,
+          child: Material(
+            // height: 300,
+            // width: 1000,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
