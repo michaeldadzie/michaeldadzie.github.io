@@ -47434,10 +47434,10 @@ q=t.t
 return new B.d4(F.a_k(C.h8,C.b2,l,M.a0v(k,E.a40(E.QL(G.a_p(new B.d4(T.aT(H.b([T.D(n,150,n),new K.ot(n),T.D(n,40,n),new N.k4(n)],q),C.m,C.t,C.l),n,T.aT(H.b([T.D(n,30,n),new K.ot(n),T.D(n,30,n),new N.k4(n)],q),C.m,C.t,C.l),n),r,new V.aC(20,20,20,20)),s),o.d,!0),o.f),C.lp,o.e,m),n,n,n)}}
 K.ot.prototype={
 C:function(a,b){var s=null,r=T.cO(L.aP("Hi there!",s,B.az(K.M(b).x,15,s,s),s,s),s,s),q=T.D(s,20,s),p=T.cO(L.aP("I'm Michael Dadzie",s,B.az(K.M(b).x,30,C.K,s),C.ak,s),s,s),o=T.D(s,80,s),n=F.aI(b,!1).a,m=K.cN(15)
-return new B.d4(new K.ou(80,80,400,400,s),new K.ou(40,40,250,250,s),new T.c3(C.vN,T.aT(H.b([r,q,p,o,new T.cn(0,1,M.aa(s,s,C.j,s,s,new S.cm(C.B.h(0,200),X.a_I(s,new L.iy("md_memoji.png",s,s),s),s,m,s,s,C.U),s,400,s,s,s,n.b),s),T.D(s,20,s),T.bj(M.aa(s,L.aP(u.c,s,B.az(K.M(b).x,15,C.r,s),s,s),C.j,s,s,s,s,s,s,s,s,s),0)],t.t),C.m,C.t,C.l),s),s)}}
+return new B.d4(new K.ou(80,80,400,400,s),new K.ou(40,40,250,250,s),new T.c3(C.vN,T.aT(H.b([r,q,p,o,new T.cn(0,1,M.aa(s,s,C.j,s,s,new S.cm(C.B.h(0,200),X.a_I(s,new L.iy("md_anim.gif",s,s),s),s,m,s,s,C.U),s,400,s,s,s,n.b),s),T.D(s,20,s),T.bj(M.aa(s,L.aP(u.c,s,B.az(K.M(b).x,15,C.r,s),s,s),C.j,s,s,s,s,s,s,s,s,s),0)],t.t),C.m,C.t,C.l),s),s)}}
 K.ou.prototype={
 C:function(a,b){var s=this,r=null,q=T.cO(L.aP("Hi there!",r,B.az(K.M(b).x,20,r,r),r,r),r,r),p=T.D(r,40,r),o=T.cO(L.aP("I'm Michael Dadzie",r,B.az(K.M(b).x,60,C.K,r),r,r),r,r),n=T.D(r,200,r),m=K.cN(15),l=t.t
-return T.aT(H.b([q,p,o,n,new T.c3(new V.aC(s.c,0,s.d,0),T.b4(H.b([T.bj(new T.cn(0,1,M.aa(r,r,C.j,r,r,new S.cm(C.B.h(0,200),X.a_I(r,new L.iy("md_memoji.png",r,r),r),r,m,r,r,C.U),r,s.e,r,r,r,s.f),r),1),T.D(r,r,30),T.bj(M.aa(r,L.aP(u.c,r,B.az(K.M(b).x,15,C.r,r),r,r),C.j,r,r,r,r,r,r,r,r,r),2)],l),C.m,r,C.t,C.l),r)],l),C.m,C.t,C.l)}}
+return T.aT(H.b([q,p,o,n,new T.c3(new V.aC(s.c,0,s.d,0),T.b4(H.b([T.bj(new T.cn(0,1,M.aa(r,r,C.j,r,r,new S.cm(C.B.h(0,200),X.a_I(r,new L.iy("md_anim.gif",r,r),r),r,m,r,r,C.U),r,s.e,r,r,r,s.f),r),1),T.D(r,r,30),T.bj(M.aa(r,L.aP(u.c,r,B.az(K.M(b).x,15,C.r,r),r,r),C.j,r,r,r,r,r,r,r,r,r),2)],l),C.m,r,C.t,C.l),r)],l),C.m,C.t,C.l)}}
 N.kF.prototype={
 al:function(){return new N.uG(F.a_l(),new N.ba(null,t.jS),C.o)}}
 N.uG.prototype={
